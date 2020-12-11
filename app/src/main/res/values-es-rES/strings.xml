@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lista Bocadillos</string>
+    <string name="bravas" translatable="false">Bocadillo de bravas</string>
+    <string name="pechuga">Bocadillo de pechuga mayonesa y pepinillos</string>
+    <string name="lomo">Bocadillo de lomo y queso</string>
+</resources>

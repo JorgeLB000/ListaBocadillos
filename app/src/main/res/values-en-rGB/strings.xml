@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lista Bocadillos</string>
+    <string name="bravas" translatable="false">Potato sandwich</string>
+    <string name="pechuga" translatable="false">Steak and pepper sandwich</string>
+    <string name="lomo" translatable="false">Bacon and cheese sandwich</string>
+</resources>
