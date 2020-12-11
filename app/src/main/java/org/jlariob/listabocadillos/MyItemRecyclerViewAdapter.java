@@ -36,12 +36,10 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        //Rescatamos los datos del elemento position
         holder.mItem = mValues.get(position);
 
         holder.textViewNombre.setText(holder.mItem.getNombre());
         holder.ratingBarValoracion.setRating(holder.mItem.getValoracion());
-        //Para la imagen vamos a usar unalibreria externa de imagenes
 
         Glide
                 .with(ctx)

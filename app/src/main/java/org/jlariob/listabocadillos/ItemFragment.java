@@ -19,18 +19,13 @@ import org.jlariob.listabocadillos.dummy.Bocadillo;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A fragment representing a list of Items.
- */
 public class ItemFragment extends Fragment {
 
     RecyclerView recyclerView;
     MyItemRecyclerViewAdapter adapterBocadillos;
     List<Bocadillo> BocadillosList;
 
-    // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
-    // TODO: Customize parameters
     private int mColumnCount = 1;
 
     public ItemFragment() {
@@ -59,7 +54,6 @@ public class ItemFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_item_list, container, false);
 
-        // Set the adapter
         if (view instanceof RecyclerView) {
             Context context = view.getContext();
             recyclerView = (RecyclerView) view;
@@ -69,13 +63,11 @@ public class ItemFragment extends Fragment {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
 
-            // LISTA DE RESTAURANTES
             BocadillosList = new ArrayList<>();
             BocadillosList.add(new Bocadillo(getString(R.string.pechuga), "https://milrecetas.net/wp-content/uploads/2017/08/recetas-de-bocadillos-3.jpg", 4.5f));
             BocadillosList.add(new Bocadillo(getString(R.string.lomo), "https://www.lapolleriaoviedo.es/wp-content/uploads/2020/03/3.-BOCADILLO-LOMO-Y-QUESO-min-scaled.jpg", 3.0f));
             BocadillosList.add(new Bocadillo(getString((R.string.bravas)),  "https://m1.paperblog.com/i/280/2803184/bocadillo-patatas-bravas-calamares-L-6etVxk.jpeg", 5.0f));
 
-            //Asignamos el recyclerView al adaptador
 
             adapterBocadillos = new MyItemRecyclerViewAdapter(getActivity() , BocadillosList);
             recyclerView.setAdapter(adapterBocadillos);
